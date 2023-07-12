@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn bgsdbhbfbdjfejh
+          Learn with sahil kumar
         </a>
       </header>
     </div>
