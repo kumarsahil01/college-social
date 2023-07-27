@@ -83,6 +83,7 @@ exports.Login = async (req, res) => {
         id: user._id,
       },
     };
+    const { password, ...info } = user._doc;
 
     jwt.sign(
       payload,
