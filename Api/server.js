@@ -19,7 +19,11 @@ const connect = async()=>{
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cookieParser())
+app.use(cors = require('cors')({
+  origin: 'localhost:3000',
+  credentials: true
+}));
 // creating routes with the starting 
 app.use("/dev/auth", authroute);
 app.use("/dev/user", userroute);
