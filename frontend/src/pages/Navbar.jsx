@@ -31,7 +31,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import "../pages/Navbar.scss";
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar"style={{ position: "sticky", top: 0, width: "100%", zIndex: 999 }}>
       <div className="navbar-left">
         <Box
           cursor="pointer"

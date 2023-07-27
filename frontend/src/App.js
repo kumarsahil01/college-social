@@ -17,6 +17,7 @@ import NewPost from './components/NewPost';
 import ReadingList from './components/ReadingList';
 import Listings from './components/Listings';
 import Podcasts from './components/Podcasts';
+import VideosPage from './components/VideoPage';
 
 function App() {
   const Layout=()=>{
@@ -42,7 +43,7 @@ function App() {
         { path: "/readinglist", element: <ReadingList />},
         { path: "/listings", element: <Listings />},
         { path: "/podcasts", element: <Podcasts />},
-
+        { path: "/videos", element: <VideosPage />},
       ],
     },
   ]);
