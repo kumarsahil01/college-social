@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React ,{useState}from 'react'
 import { useNavigate } from "react-router-dom";
-
+import Cookies from "js-cookie";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -12,8 +12,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://college-social-backendasgfdh.onrender.com/dev/auth/login", { username, password });
-      console.log(res.data);
+      const res = await axios.post("https://college-social-backendasgfdh.onrender.com/dev/auth/login", { email, password });
+      const token = res.data.token;
+      Cookies.set("token", token);
+      // console.log(res.data);
       localStorage.setItem("currentUser", JSON.stringify(res.data));
       navigate("/");
     } catch (err) {
@@ -29,7 +31,7 @@ const Login = () => {
         name="email"
         type="email"
         placeholder="johndoe@gmail.com"
-        onChange={(e) => setUsername(e.target.value)}
+        onChange={(e) => setEmail(e.target.value)}
       />
 
       <label htmlFor="">Password</label>

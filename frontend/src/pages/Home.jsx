@@ -58,7 +58,7 @@ const Home = () => {
     <div className="home">
      <div className="left">
   <List spacing={3}>
-    <Link to="/reading-list">
+    <Link to="/readinglist">
       <ListItem _hover={{ color: "green.500" }}>
         <ListIcon as={MdBook} color="green.500" />
         Reading List
