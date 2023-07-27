@@ -93,7 +93,7 @@ exports.Login = async (req, res) => {
       (err, token) => {
         if (err) throw err;
         res.cookie("acessToken", token, {  httpOnly: true });
-        res.status(200).json({ message: "Login successful", token });
+        res.status(200).json({ message: "Login successful",user, token });
       }
     );
    
